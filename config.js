@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const connection = mongoose.connect('mongodb://localhost/myintern', {
+const connection = mongoose.connect('mongodb://localhost/myintern', {  //this myintern should be the database name in which u are storing data if database name is myintern then ok.
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
