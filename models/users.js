@@ -1,11 +1,10 @@
 const Users = require("../schemas/users");
-
-
-let loginUser = async (request) => {
-    const userinfo = await Users.find({email: request.email, password: request.password });
-    return userinfo;
+let loginuser = async (request) => {
+  const query = {email: request.email, password: request.password }
+  const addquery = new Users(query);
+  const userinfo = await addquery.save();
+  return userinfo;
 }
-
 module.exports = {
-    loginUser
+    loginuser
 };
